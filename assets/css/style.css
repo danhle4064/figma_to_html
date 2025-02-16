@@ -7,4 +7,81 @@ html {
 /* khôi phục cỡ chữ mặc định theo rem */
 body {
   font-size: 1.6rem;
+  font-family: "Poppins", serif;
+}
+/* ========================thuộc tính chung cho cả web======================= */
+a {
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  padding: 0 16px;
+  line-height: 50px;
+  min-width: 118px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+.main-content {
+  width: 1170px;
+  /* căn giữa với margin left và right */
+  margin-left: auto;
+  margin-right: auto;
+  /* hàm calc giữ nội dung cố định, không sát lề khi co dãn trang web (trái phải đều cách lề 24px do căn giữa (48px chia đôi)) */
+  max-width: calc(100% - 48px);
+}
+/* ========================header======================= */
+.header {
+  background: #fffcf4;
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
+  /* do padding top là 36px mà ta muốn nó chạy tới 8px dừng lại nên ta lấy 36-8 ra 28 mà ở phía trên là âm nên thêm dấu - */
+}
+.header .body-header {
+  /* tác động vào class body header là con của class header */
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+.nav {
+  /* căn toàn bộ thanh nav bao gồm btn sign up sang trái */
+  margin-left: auto;
+}
+.nav ul {
+  /* tác động vào thẻ ul là con của class nav */
+  display: flex;
+}
+.nav a {
+  position: relative; /* điều chỉnh vị trí dấu gạch ngang dưới chữ Home */
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px;
+}
+.nav li.active a,
+.nav a:hover {
+  /* tạo hiệu ứng khi rê chuột qua thẻ a */
+  color: #171100;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+  position: absolute;
+  left: 21px; /* điều chỉnh vị trí dấu gạch ngang dưới chữ Home */
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+.header .btn-sign-up {
+  width: 144px;
+}
+.header .action {
+  margin-left: 49px;
 }
