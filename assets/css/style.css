@@ -17,6 +17,15 @@ body {
 a {
   text-decoration: none;
 }
+.heading-lv2 {
+  /*nếu heading nào có style giống thì chỉ cần đặt tên class là sử dụng được*/
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: -0.76px;
+}
 .btn {
   display: inline-block;
   padding: 0 16px;
@@ -227,4 +236,43 @@ a {
 }
 .hero .stats {
   margin-top: 8px;
+}
+/* ========================popular======================= */
+.popular {
+  margin-top: 200px;
+}
+.popular-top {
+  display: flex;
+  justify-content: space-between; /*dãn kịch về hai phía lề*/
+}
+.popular-top .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.66;
+  margin-top: 16px;
+  width: 458px;
+}
+.popular-top .controls {
+  display: flex;
+  gap: 18px; /*cách hai icon mũi tên ra*/
+  align-items: center; /*cho khối này nằm giữa hai đoạn text*/
+}
+.popular-top .control-btn {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  /* căn giữa mũi tên với hình tròn, sau đó ta thêm thuộc tính display:flex như đoạn 256 để dàn ngang hai nút */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  /* ta đổi màu của hai mũi tên thành màu đen (currentColor) trong index, sau đó ta đổi thành màu khác như trong code */
+}
+.popular-top .control-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer; /*hiển thị bàn tay*/
 }
