@@ -284,8 +284,7 @@ a {
   gap: 30px;
 }
 .popular .course-item .thumbnail {
-  width: 100%;
-  /* điều chỉnh độ rộng của hình không bị tràn ra ngoài */
+  width: 100%; /* điều chỉnh độ rộng của hình không bị tràn ra ngoài */
   border-radius: 12px 12px 0px 0px;
   height: 278px;
 }
@@ -348,3 +347,68 @@ a {
 .popular .course-item .btn-book:hover {
   background: var(--primary-color);
 }
+/* ========================feedback======================= */
+.feedback {
+  margin-top: 200px;
+  padding: 96px 0 96px;
+  background: #2e2100;
+}
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+.feedback .feedback-item {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%; /*ta thêm width 100% để text không bị đẩy hết về bên phải*/
+}
+.feedback .info .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 72px;
+  object-fit: cover; /*để ảnh không bị méo*/
+}
+.feedback .info .member-name {
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+  margin-top: 18px;
+}
+.feedback .info .desc-Student {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.85;
+  margin-top: 4px;
+}
+.feedback .info .dots {
+  margin-top: 28px;
+  display: flex;
+  gap: 6px; /*dãn cách các item ra đều nhau*/
+}
+.feedback .info .dot {
+  width: 6px;
+  height: 6px;
+  gap: 6px;
+  border-radius: 6px;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback .info .dot.active {
+  background-color: var(--primary-color);
+  /* thể hiện đồng thời cả 2 class dot và active */
+  cursor: default;
+}
+.feedback .content {
+  width: 66%;
+  /* width của figma là 770, ta đã giới hạn width của nội dung chung là 1170 nên ta lấy 770/1170 rồi dùng phần trăm */
+  margin-left: auto; /*dãn đều sát lề giống với space-between*/
+}
+.feedback .content blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
+}
+/* khi học javascript sẽ học cách di chuyển qua lại (hiệu ứng trượt) */
