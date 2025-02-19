@@ -412,3 +412,44 @@ a {
   line-height: 1.54;
 }
 /* khi học javascript sẽ học cách di chuyển qua lại (hiệu ứng trượt) */
+/* ========================feedback======================= */
+.feature {
+  margin-top: 200px;
+}
+.feature .images {
+  display: flex;
+  gap: 30px; /*hai ảnh cách nhau 30px*/
+}
+.feature .images img {
+  /* tác động vào thẻ img để thay đổi kích thước */
+  width: 270px;
+  height: 404px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.feature .body-feature {
+  display: flex;
+  justify-content: space-between;
+}
+.feature .body-feature .lower {
+  margin-top: 34px;
+}
+.feature .content-feature {
+  width: 41%;
+  /* lấy độ rộng chung của web 1170 chia độ rộng trên figma 470 rồi lấy kết quả % */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feature .content-feature .desc {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+.feature .content-feature .cta-btn {
+  background: var(--primary-color);
+  width: 137px;
+  height: 50px;
+  margin-top: 32px;
+}
