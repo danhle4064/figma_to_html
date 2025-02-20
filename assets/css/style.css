@@ -596,3 +596,74 @@ a {
   background-color: var(--primary-color);
   cursor: default;
 }
+/* ========================footer======================= */
+.footer {
+  padding: 96px 135px 0;
+  background: #2e2100;
+}
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+.footer .row .column:first-child {
+  width: 35%;
+  /* ta lấy width của khối lesson 267 cộng với khoảng cách tới khối company là 145 rồi lấy tổng đó chia 1170 rồi lấy % */
+}
+.footer .row .column {
+  width: 21.6%;
+  /* ta lấy 100% - 35% (khối lesson) sau đó chia 3 */
+}
+.footer .row .column .desc {
+  width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.85;
+  margin-top: 18px;
+}
+.footer .row .column .socials {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+}
+.footer .row .column .title {
+  /* đường line nào có border radius thì dùng before,after còn không thì dùng border */
+  padding-bottom: 14px;
+  padding-right: 48px; /*130-82*/
+  border-bottom: 1px solid #59554b;
+  display: inline-block; /*do thẻ h3 là display:block kéo dài hết thẻ cha nên ta đổi qua inline-block để ôm trọn text*/
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.footer .row .column .list {
+  margin-top: 28px;
+}
+.footer .row .column .list a {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.85;
+}
+.footer .row .column .list li:last-child a {
+  margin-bottom: 0;
+  /* chọn thẻ a nằm cuối cùng để không bị margin */
+}
+.footer .row .column strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.85;
+}
+.footer .copyright {
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.85;
+  padding: 28px 0;
+}
