@@ -486,3 +486,113 @@ a {
   border-radius: 20px;
   object-fit: cover;
 }
+/* ========================blog======================= */
+.blogs {
+  margin-top: 200px;
+  background: #fffcf4;
+  padding: 96px 0;
+}
+.blogs .blog-top {
+  text-align: center;
+}
+.blogs .blog-list {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+.blogs .desc-blog {
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  margin-top: 16px;
+  width: 448px;
+  margin: 0 auto; /*căn giữa*/
+}
+.blogs .blog img {
+  /* điều chỉnh kích thước của 3 ảnh */
+  width: 370px;
+  height: 250px;
+  border-radius: 16px 16px 0px 0px;
+  object-fit: cover;
+}
+.blogs .info-blog {
+  padding: 20px 20px 28px;
+}
+.blogs .blog-list .date {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.85;
+  padding-bottom: 12px; /*đẩy thanh line xuống 12px*/
+}
+.blogs .blog-list .date::before {
+  /* thẻ giả before là thẻ con của class date nên ta có thể dùng display:flex cho class date */
+  content: "";
+  display: inline-block; /*để xét kích thước*/
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+/* tạo dấu gạch ngang dưới ngày tháng bằng after (tác động sau phần ngày tháng) */
+.blogs .blog-list .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  width: 160px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+.blogs .blog .title {
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.blogs .btn-Read-more {
+  margin: 12px;
+  font-size: 1.4rem;
+}
+.blogs .btn-Read-more:hover {
+  background-color: var(--primary-color);
+}
+.blogs .blog-list .blog {
+  width: 370px;
+  height: 467px;
+  border-radius: 16px;
+  background: #fff;
+  margin-top: 55px;
+  flex-shrink: 0;
+}
+.blogs .blog-list .blog:hover {
+  width: 370px;
+  height: 467px;
+  border-radius: 16px;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.blogs .dots-blog {
+  /* thuộc tính chung của khối dots */
+  display: flex;
+  margin-top: 38px;
+  justify-content: center;
+  gap: 6px;
+}
+.blogs .dots-blog .dot {
+  /* điều chỉnh thuộc tính từng dot */
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #5f5b53;
+  cursor: pointer;
+}
+.blogs .dots-blog .dot.active {
+  /* dot được chọn sẽ hiện màu */
+  background-color: var(--primary-color);
+  cursor: default;
+}
